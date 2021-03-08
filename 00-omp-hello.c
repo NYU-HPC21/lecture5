@@ -1,5 +1,5 @@
 // OpenMP hello world
-// $ gcc -fopenmp omp-hello.c && ./a.out
+// $ gcc -fopenmp 00-omp-hello.c && ./a.out
 // # export OMP_NUM_THREADS = <number-of-threads>
 
 #include <omp.h>
