@@ -1,4 +1,4 @@
-// $ gcc -O3 -fopenmp omp-reduction.c && ./a.out
+// $ gcc -O3 -fopenmp 02-omp-reduction.c && ./a.out
 
 #include <stdlib.h>
 #include <stdio.h>

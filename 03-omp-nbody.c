@@ -1,4 +1,4 @@
-// $ gcc -O3 -fopenmp nbody.c && ./a.out
+// $ gcc -O3 -fopenmp 03-nbody.c && ./a.out
 
 #include <stdlib.h>
 #include <stdio.h>

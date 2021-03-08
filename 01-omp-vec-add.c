@@ -1,4 +1,4 @@
-// $ gcc -O3 -fopenmp omp-vec-add.c && ./a.out
+// $ gcc -O3 -fopenmp 01-omp-vec-add.c && ./a.out
 
 #include <stdlib.h>
 #include <stdio.h>

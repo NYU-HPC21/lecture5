@@ -1,6 +1,6 @@
 /* Jacobi smoothing to solve -u''=f
  * Global vector has N inner unknowns.
- * gcc -fopenmp -lm jacobi.c && ./a.out 20 1000
+ * gcc -fopenmp -lm 04-omp-jacobi.c && ./a.out 200000 100
  */ 
 #include <stdio.h>
 #include <stdlib.h>
@@ -13,7 +13,7 @@ double compute_residual(double *u, int N, double invhsq)
 {
   int i;
   double tmp, res = 0.0;
-
+#pragma omp parallel for reduction (+:res)
   for (i = 1; i <= N; i++){
     tmp = ((2.0*u[i] - u[i-1] - u[i+1]) * invhsq - 1);
     res += tmp * tmp;
@@ -50,6 +50,7 @@ int main(int argc, char * argv[])
   for (iter = 0; iter < max_iters && res/res0 > tol; iter++) {
 
     /* Jacobi step for all the inner points */
+#pragma omp parallel for
     for (i = 1; i <= N; i++){
       unew[i] =  u[i] + omega * 0.5 * (hsq + u[i - 1] + u[i + 1] - 2*u[i]);
     }
