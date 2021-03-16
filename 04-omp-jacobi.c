@@ -37,7 +37,7 @@ int main(int argc, char * argv[])
   double* unew = (double *) calloc(sizeof(double), N+2);
 
   double h = 1.0 / (N + 1);
-  double hsq = h;
+  double hsq = h*h;
   double invhsq = 1./hsq;
   double res, res0, tol = 1e-5;
 

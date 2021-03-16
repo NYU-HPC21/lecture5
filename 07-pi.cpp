@@ -6,6 +6,7 @@
  *
  * This computes pi various ways
  */
+// g++ -O3 -fopenmp 07-pi.cpp && ./a.out
 
 #include <stdio.h>
 #include <omp.h>

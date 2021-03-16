@@ -1,3 +1,5 @@
+// g++ -O3 -fopenmp 05-scheduling.cpp && ./a.out
+
 #include <omp.h>
 #include <stdio.h>
 #include "utils.h"

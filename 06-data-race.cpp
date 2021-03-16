@@ -1,3 +1,5 @@
+// g++ -O3 -fopenmp 06-data-race.cpp && ./a.out
+
 #include <omp.h>
 #include <stdio.h>
 #include <assert.h>
